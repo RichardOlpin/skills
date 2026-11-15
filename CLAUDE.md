@@ -31,3 +31,17 @@ Every skill that dispatches a subagent says to start it with a fresh context win
 ### Triage labels
 
 Canonical names, unchanged. See `docs/agents/triage-labels.md`. Issues are judged against [`SCOPE.md`](./SCOPE.md).
+
+## Home Workspace
+
+This repo is the Home Repo: start sessions here, and this file (also reachable as the `AGENTS.md` symlink) carries the pointers to the other repos. It is a fork of `mattpocock/skills`: `origin` is `RichardOlpin/skills`, `upstream` is `mattpocock/skills`. Sync with `git fetch upstream && git merge upstream/main`.
+
+OpenCode loads skills from `~/Code/opencode.jsonc`: `skills/engineering` and `skills/productivity` (with `skills/in-progress` commented out). Local tweaks live in this fork; `~/Code/Public/skills` stays pristine for diffing against upstream.
+
+### Other Repos
+
+- **Public/skills** (pristine clone of `mattpocock/skills`, reference only, do not edit): `~/Code/Public/skills`.
+- **wadsworth-v2** (Wadsworth Travel Concierge v2, Python/uv, AI-DLC under `aidlc/`): `~/Code/wadsworth-v2`. Read its `AGENTS.md` before changing anything; verify with `make verify`.
+- **travel-agent** (Wadsworth v1, Python/uv, Playwright): `~/Code/travel-agent`. Local only, no git remote; uses `./.bin/uv`.
+- **wadsworth** (minimal repo, shares the `RichardOlpin/wadsworth` remote with `wadsworth-v2`): `~/Code/wadsworth`.
+- **moria-homelab** (Ubuntu 24.04 bootstrap scripts and Docker Compose stacks): `~/Code/moria-homelab`. Remote: `https://github.com/RichardOlpin/moria-homelab.git`.

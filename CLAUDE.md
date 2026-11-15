@@ -45,3 +45,5 @@ OpenCode loads skills from `~/Code/opencode.jsonc`: `skills/engineering` and `sk
 - **travel-agent** (Wadsworth v1, Python/uv, Playwright): `~/Code/travel-agent`. Local only, no git remote; uses `./.bin/uv`.
 - **wadsworth** (minimal repo, shares the `RichardOlpin/wadsworth` remote with `wadsworth-v2`): `~/Code/wadsworth`.
 - **moria-homelab** (Ubuntu 24.04 bootstrap scripts and Docker Compose stacks): `~/Code/moria-homelab`. Remote: `https://github.com/RichardOlpin/moria-homelab.git`.
+- **docket** (Self-hosted family wall calendar and photo frame appliance, Python/uv, FastAPI/HTMX): `~/Code/docket`. Remote: `git@github.com:RichardOlpin/docket.git`. Read its `CLAUDE.md` before changing anything; verify with `make verify`.
+- **Public/OpenSky** (pristine clone of `CosmoJM/OpenSky`, reference only, do not edit): `~/Code/Public/OpenSky`.

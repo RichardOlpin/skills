@@ -47,3 +47,10 @@ OpenCode loads skills from `~/Code/opencode.jsonc`: `skills/engineering` and `sk
 - **moria-homelab** (Ubuntu 24.04 bootstrap scripts and Docker Compose stacks): `~/Code/moria-homelab`. Remote: `https://github.com/RichardOlpin/moria-homelab.git`.
 - **docket** (Self-hosted family wall calendar and photo frame appliance, Python/uv, FastAPI/HTMX): `~/Code/docket`. Remote: `git@github.com:RichardOlpin/docket.git`. Read its `CLAUDE.md` before changing anything; verify with `make verify`.
 - **Public/OpenSky** (pristine clone of `CosmoJM/OpenSky`, reference only, do not edit): `~/Code/Public/OpenSky`.
+
+### Homelab SSH (`erebor`)
+
+- Alias: `ssh erebor '<non-interactive command>'` (user `rolpin`, LAN IP `192.168.0.91`, Tailscale IP `100.104.125.73` or `erebor.moria.ts.net`, key `~/.ssh/id_ed25519`, `ForwardAgent yes`).
+- Always pass non-interactive commands as arguments (for example, `ssh -o BatchMode=yes erebor 'docker ps'`). Never start an interactive shell or guess local usernames.
+- On `erebor`, GitHub checkouts live under `~/Github/` (`~/Github/moria-homelab`, `~/Github/docket`).
+

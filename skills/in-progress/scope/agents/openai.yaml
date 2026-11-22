@@ -1,0 +1,3 @@
+interface:
+  display_name: "Scope"
+  short_description: "Hold a session to one issue"

@@ -34,7 +34,7 @@ Canonical names, unchanged. See `docs/agents/triage-labels.md`. Issues are judge
 
 ## Home Workspace
 
-This repo is the Home Repo: start sessions here, and this file (also reachable as the `AGENTS.md` symlink) carries the pointers to the other repos. It is a fork of `mattpocock/skills`: `origin` is `RichardOlpin/skills`, `upstream` is `mattpocock/skills`. Sync with `git fetch upstream && git merge upstream/main`.
+This repo is the Home Repo: start sessions here, and this file (also reachable as the `AGENTS.md` symlink) carries the pointers to the other repos. It is a fork of `mattpocock/skills`: `origin` is `RichardOlpin/skills`, `upstream` is `mattpocock/skills`. Sync by merging `upstream/main` into a branch and opening a PR: `.githooks/pre-push` blocks direct pushes to `main`, and `.githooks/pre-commit` scans staged changes for secrets. Enable both once per clone with `git config core.hooksPath .githooks`.
 
 OpenCode loads skills from `~/Code/opencode.jsonc`: `skills/engineering` and `skills/productivity` (with `skills/in-progress` commented out). Local tweaks live in this fork; `~/Code/Public/skills` stays pristine for diffing against upstream.
 

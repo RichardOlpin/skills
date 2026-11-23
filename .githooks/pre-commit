@@ -1,0 +1,5 @@
+#!/bin/sh
+# Blocks a commit that adds a secret. Needs gitleaks (`brew install gitleaks`); CI runs the same scan
+# on every push, so a missing gitleaks only skips the early warning.
+command -v gitleaks >/dev/null 2>&1 || { echo "pre-commit: gitleaks not installed, secret scan skipped (CI still checks)" >&2; exit 0; }
+exec gitleaks git --pre-commit --staged --redact --no-banner
